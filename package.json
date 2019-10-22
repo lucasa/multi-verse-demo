@@ -1,15 +1,15 @@
 {
   "name": "open-wc-lit-html-basics",
   "version": "0.2.0",
-  "description": "demo for multi-chart",
+  "description": "demo for multi-verse",
   "license": "MIT",
   "main": "index.js",
   "module": "index.js",
   "authors": [
     "christophe.geiser <christophe.geiser@preignition.org>"
   ],
-  "repository": "https://github.com/preignition/multi-chart-demo",
-  "homepage": "https://github.com/preignition/multi-chart-demo",
+  "repository": "https://github.com/preignition/multi-verse-demo",
+  "homepage": "https://github.com/preignition/multi-verse-demo",
   "scripts": {
     "start": "es-dev-server",
     "prepublishOnly": "pika install --optimize",
@@ -38,10 +38,10 @@
     ]
   },
   "dependencies": {
-    "@preignition/multi-verse": "file:../multi-verse",
-    "@preignition/multi-geo": "file:../multi-geo",
-    "@preignition/multi-chart": "file:../multi-chart",
-    "@preignition/preignition-mixin": "file:../preignition-mixin",
+    "@preignition/multi-verse": "^4",
+    "@preignition/multi-geo": "^4",
+    "@preignition/multi-chart": "^4",
+    "@preignition/preignition-mixin": "^1",
     "@morbidick/lit-element-notify": "*",
     "@polymer/paper-card": "^3.0.1",
     "@vaadin/router": "^1.2.0",
