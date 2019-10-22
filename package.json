@@ -19,8 +19,10 @@
     "webDependencies": [
       "@morbidick/lit-element-notify",
       "@polymer/paper-card",
-      "@preignition/multi-chart",
       "@preignition/multi-verse",
+      "@preignition/multi-geo",
+      "@preignition/multi-chart",
+      "@preignition/preignition-mixin",
       "@vaadin/router",
       "@vaadin/vaadin-tabs",
       "@webcomponents/webcomponentsjs",
@@ -36,8 +38,12 @@
     ]
   },
   "dependencies": {
-    "@preignition/multi-chart": "file:../multi-chart",
+    
     "@preignition/multi-verse": "file:../multi-verse",
+    "@preignition/multi-geo": "file:../multi-geo",
+    "@preignition/multi-chart": "file:../multi-chart",
+    "@preignition/preignition-mixin": "file:../preignition-mixin",
+    
     "@morbidick/lit-element-notify": "*",
     "@polymer/paper-card": "^3.0.1",
     "@vaadin/router": "^1.2.0",

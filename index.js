@@ -1,14 +1,14 @@
 import { LitElement, html, css } from '/web_modules/lit-element.js';
 import './src/01-basic/basic-demos.js';
-// import './src/02-charts/charts-demos.js';
-// import './03-advanced/advanced-demos.js';
+import './src/02-charts/charts-demos.js';
+import './src/03-advanced/advanced-demos.js';
 
 // import '/web_modules/@preignition/multi-chart.js';
 import '/web_modules/@preignition/multi-verse.js';
 // import '@preignition/multi-chart';
 
-import '/web_modules/@polymer/paper-card.js';
-import '/web_modules/@vaadin/vaadin-tabs.js';
+// import '/web_modules/@polymer/paper-card.js';
+// import '/web_modules/@vaadin/vaadin-tabs.js';
 
 import { github } from './assets/github.js';
 import { openWc } from './assets/open-wc.js';
@@ -116,6 +116,7 @@ class OpenWcDemo extends LitElement {
       </vaadin-tabs>
 
       <div id="outlet">
+
       </div>
       <p class="footer">🚽 Made with love by <a target="_blank" href="https://open-wc.org/">open-wc</a>.</p>
     `;

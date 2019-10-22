@@ -2,7 +2,9 @@ dependencies:
   '@morbidick/lit-element-notify': 1.0.2_lit-element@2.2.1+lit-html@1.1.2
   '@polymer/paper-card': 3.0.1
   '@preignition/multi-chart': 'link:../multi-chart'
+  '@preignition/multi-geo': 'link:../multi-geo'
   '@preignition/multi-verse': 'link:../multi-verse'
+  '@preignition/preignition-mixin': 'link:../preignition-mixin'
   '@vaadin/router': 1.5.0
   '@vaadin/vaadin-tabs': 2.1.2
   '@webcomponents/webcomponentsjs': 2.3.0
@@ -2723,7 +2725,9 @@ specifiers:
   '@pika/web': ^0.6.1
   '@polymer/paper-card': ^3.0.1
   '@preignition/multi-chart': 'file:../multi-chart'
+  '@preignition/multi-geo': 'file:../multi-geo'
   '@preignition/multi-verse': 'file:../multi-verse'
+  '@preignition/preignition-mixin': 'file:../preignition-mixin'
   '@vaadin/router': ^1.2.0
   '@vaadin/vaadin-tabs': ^2.1.2
   '@webcomponents/webcomponentsjs': ^2.2.7

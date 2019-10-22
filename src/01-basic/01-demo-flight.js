@@ -1,5 +1,6 @@
 // LitElement and html are the basic required imports
 import { LitElement, html, css } from '/web_modules/lit-element.js';
+import {render} from '/web_modules/lit-html.js';
 import * as format from '/web_modules/d3-time-format.js';
 import { schemeCategory10 } from '/web_modules/d3-scale-chromatic.js';
 import { scaleOrdinal } from '/web_modules/d3-scale.js';
@@ -52,10 +53,58 @@ class DemoFlight extends LitElement {
               <multi-legend .scale="${this.dayScale}" position="top-right"></multi-legend>
             </multi-verse-pie>
           </multi-group>
+
+          <multi-data-provider id="provider" 
+            @data-provider-changed="${e => this.dataProvider = e.detail.value}" 
+            @length-changed="${e => this.length = e.detail.value}" 
+            .universe="${this.universe}" 
+            column="$index">
+            
+            <h3>Total Count: ${this.length}</h3>
+             <vaadin-grid id="grid" _item-id-path="name.first" _items="[[items]]" 
+               .dataProvider="${this.dataProvider}" multi-selection column-reordering-allowed>
+                
+              <vaadin-grid-column flex-grow="0"  width="145px"  frozen resizable header="Index" .renderer="${this.indexRenderer}"></vaadin-grid-column>
+              <vaadin-grid-column flex-grow="1" header="Destination" .renderer="${this.destinationRenderer}"></vaadin-grid-column>
+              <vaadin-grid-sort-column path="origin" flex-grow="1" header="Origin"></vaadin-grid-sort-column>
+              <vaadin-grid-sort-column path="destination" flex-grow="1" header="Destination"></vaadin-grid-sort-column>
+              <vaadin-grid-column flex-grow="1" header="Date" .renderer="${this.dateRenderer}"></vaadin-grid-column>
+
+            </vaadin-grid>
+
+           </multi-data-provider>
         </multi-verse>
             
 
     `;
+  }
+
+  dateRenderer(root, column, rowData) {
+
+    return render(
+      html`
+        <span >${rowData.item.date}</span>
+      `, 
+      root
+    );
+  }
+
+  destinationRenderer(root, column, rowData) {
+    return render(
+      html`
+        <paper-input .value="${rowData.item.destination}" @value-changed="${e => rowData.item.destination = e.detail.value}" no-label-float></paper-input>
+      `, 
+      root
+    );
+  }
+
+  indexRenderer(root, column, rowData) {
+    return render(
+      html`
+        <div>${rowData.index}</div>
+      `, 
+      root
+    );
   }
 
   static get properties() {
@@ -69,6 +118,8 @@ class DemoFlight extends LitElement {
       dataDay: { type: Array },
       colorScale: { type: Function },
       dayScale: { type: Function },
+      dataProvider: {type: Function},
+      length: {type: Number}
 
 
     }
