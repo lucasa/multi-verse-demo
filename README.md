@@ -1,5 +1,5 @@
-# Multi Charts Demo
-Basic examples for working with `multi-chart`  
+# Multi Verse Demo
+Basic examples for working with [multi-verse](https://github.com/preignition/multi-verse)
 
 ## Installation
 
